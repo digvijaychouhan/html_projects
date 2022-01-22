@@ -29,14 +29,17 @@ function win(userChoice, computerChoice) {
   userScore++;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
-  result_p.innerHTML = convertToWord(userChoice) + " beats " + convertToWord(computerChoice) + ". You win!";
+  const smallUserWord = "user".fontsize(3).sup();
+  const smallCompWord = "comp".fontsize(3).sup();
+  result_p.innerHTML = `${convertToWord(userChoice)} ${smallUserWord} beats ${convertToWord(computerChoice)} ${smallCompWord}. You win!`;
 }
 
 function lose(computerChoice, userChoice) {
   computerScore++;
   computerScore_span.innerHTML = computerScore;
   userScore_span.innerHTML = userScore;
-  result_p.innerHTML = convertToWord(computerChoice) + " beats " + convertToWord(userChoice) + ". You Lose!";
+
+  result_p.innerHTML = `${convertToWord(computerChoice)} ${smallUserWord} beats ${convertToWord(userChoice)} ${smallCompWord}. You Lose!`;
 }
 
 function game(userChoice) {
