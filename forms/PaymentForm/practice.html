@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style>
+    input[type="checkbox"] {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    input[type="checkbox"] {
+      position: relative;
+      width: 1em;
+      height: 1em;
+      border: 1px solid gray;
+      /* Adjusts the position of the checkboxes on the text baseline */
+      vertical-align: -2px;
+      /* Set here so that Windows' High-Contrast Mode can override */
+      color: green;
+    }
+
+    input[type="checkbox"]::before {
+      content: "✔";
+      position: absolute;
+      font-size: 1.2em;
+      right: -1px;
+      top: -0.3em;
+      visibility: hidden;
+    }
+
+    input[type="checkbox"]:checked::before {
+      /* Use `visibility` instead of `display` to avoid recalculating layout */
+      visibility: visible;
+    }
+
+    input[type="checkbox"]:disabled {
+      border-color: black;
+      background: #ddd;
+      color: gray;
+    }
+
+
+    </style>
+
+  </head>
+  <body>
+
+    <form>
+      <fieldset>
+        <legend>Fruit preferences</legend>
+
+        <p>
+          <label>
+            <input type="checkbox" name="fruit-1" value="cherry">
+            I like cherry
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" name="fruit-2" value="banana" disabled>
+            I can't like banana
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" name="fruit-3" value="strawberry">
+            I like strawberry
+          </label>
+        </p>
+      </fieldset>
+    </form>
+
+
+
+
+
+
+    <!-- <form>
+  <p>
+    <label for="search">search: </label>
+    <input id="search" name="search" type="search">
+  </p>
+  <p>
+    <label for="text">text: </label>
+    <input id="text" name="text" type="text">
+  </p>
+  <p>
+    <label for="date">date: </label>
+    <input id="date" name="date" type="datetime-local">
+  </p>
+  <p>
+    <label for="radio">radio: </label>
+    <input id="radio" name="radio" type="radio">
+  </p>
+  <p>
+    <label for="checkbox">checkbox: </label>
+    <input id="checkbox" name="checkbox" type="checkbox">
+  </p>
+  <p><input type="submit" value="submit"></p>
+  <p><input type="button" value="button"></p>
+</form> -->
+
+    <!-- <progress max="100" value="75">75/100</progress>
+    <meter value="75" min="0" max="100" low="33" high="66" optimum="50">75</meter> -->
+    <!-- <label for="myFruit">What's your favorite fruit?</label>
+    <input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+    <datalist id="mySuggestion">
+      <option>Apple</option>
+      <option>Banana</option>
+      <option>Blackberry</option>
+      <option>Blueberry</option>
+      <option>Lemon</option>
+      <option>Lychee</option>
+      <option>Peach</option>
+      <option>Pear</option>
+    </datalist> -->
+    <!-- <select class="" name="simple">
+      <option value="banana">Big, beautiful yellow banana</option>
+      <option value="cherry">Succulent, juicy cherry</option>
+      <option value="lemon">Sharp, powerful lemon</option>
+    </select> -->
+
+    <!-- <select class="" name="groups" id="groups" multiple size="2">
+      <optgroup label="Fruits">
+          <option value="">Apple</option>
+          <option value="" selected>Banana</option>
+          <option value="">Orange</option>
+          <option value="">Cherry</option>
+          <option value="">Pineapple</option>
+      </optgroup>
+
+      <optgroup label="Vegitables">
+          <option value="">Cauliflower</option>
+          <option value="">Groud</option>
+          <option value="">Okra</option>
+          <option value="">Potato</option>
+          <option value="">Beetroot</option>
+      </optgroup>
+
+    </select> -->
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <link href="payment-form.css" rel="stylesheet">
+    <title>Payment form</title>
+  </head>
+  <body>
+    <form class="" action="index.html" method="post">
+      <h1>Payment form</h1>
+      <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+      <section>
+        <h2>Contact Information</h2>
+        <fieldset>
+          <legend>Title</legend>
+          <ul>
+            <label for="title_1">
+              <input type="radio" id="title_1" name="title" value="A" >
+              Ace
+            </label>
+            <label for="title_1">
+              <input type="radio" id="title_1" name="title" value="K" >
+              King
+            </label>
+            <label for="title_1">
+              <input type="radio" id="title_1" name="title" value="Q" >
+              Queen
+            </label>
+          </ul>
+        </fieldset>
+        <p>
+         <label for="name">
+           <span>Name: </span>
+           <strong><abbr title="required">*</abbr></strong>
+         </label>
+         <input type="text" id="name" name="username">
+       </p>
+       <p>
+         <label for="mail">
+           <span>E-mail: </span>
+           <strong><abbr title="required">*</abbr></strong>
+         </label>
+         <input type="email" id="mail" name="usermail">
+       </p>
+       <p>
+         <label for="pwd">
+           <span>Password: </span>
+           <strong><abbr title="required">*</abbr></strong>
+         </label>
+         <input type="password" id="pwd" name="password">
+       </p>
+      </section>
+
+      <section>
+        <h2>Payment Information</h2>
+        <p>
+          <label for="card">
+            <span>Card Type: </span>
+          </label>
+        </p>
+      </section>
+
+    </form>
+  </body>
+</html>
